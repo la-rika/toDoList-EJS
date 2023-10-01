@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public')) //diciamo ad express dove andare a prendere i file a cui facciamo riferimento (css, img...)
 
-mongoose.connect("mongodb+srv://"+srvr+":"+srvrCred+"@udemy-cluster.e18m7ig.mongodb.net/todolistDB?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://"+srvr+":"+srvrCred+"@udemy-cluster.e18m7ig.mongodb.net/?retryWrites=true&w=majority/todolistDB", { useNewUrlParser: true });
 
 const itemsSchema = new mongoose.Schema({
     name: String
